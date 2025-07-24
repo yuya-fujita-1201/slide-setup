@@ -1,0 +1,47 @@
+{
+  "name": "accenture-slides",
+  "version": "1.0.0",
+  "description": "Accenture-branded HTML slide generator with dynamic period calculation",
+  "main": "cli/generate-slide.js",
+  "type": "module",
+  "bin": {
+    "acn-slide": "./cli/generate-slide.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint cli/**/*.ts --fix",
+    "format": "prettier --write .",
+    "generate": "node dist/cli/generate-slide.js",
+    "setup": "npm install && npm run build",
+    "clean": "rm -rf dist/ slides/"
+  },
+  "keywords": [
+    "accenture",
+    "slides",
+    "presentation",
+    "html",
+    "roadmap",
+    "timeline"
+  ],
+  "author": "Accenture",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "js-yaml": "^4.1.0",
+    "commander": "^11.1.0",
+    "chalk": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@types/js-yaml": "^4.0.9",
+    "typescript": "^5.3.0",
+    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "prettier": "^3.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

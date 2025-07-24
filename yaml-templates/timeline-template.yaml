@@ -1,0 +1,56 @@
+# Timeline Slide Template
+# タイムライン/ロードマップスライド用のYAMLテンプレート
+# 
+# このテンプレートをコピーして、プロジェクトの実際の情報に置き換えてください
+# CLI実行例: npm run generate -- --type timeline --config configs/your-timeline.yaml
+
+title: "新システム開発ロードマップ"  # スライドのタイトル
+description: "7月から10月までの開発スケジュールと主要マイルストーン"  # スライドの説明文
+period:  # 期間設定
+  start: "7月"      # 開始月（例: "7月", "1月"）
+  end: "10月"       # 終了月（例: "10月", "12月"）
+  duration: "4ヶ月" # 期間（自動計算されるため省略可能）
+
+tasks:  # タスク一覧
+  - category: "要件定義・設計"  # カテゴリ名
+    items:
+      - name: "要件定義"       # タスク名
+        start: "7月1日"       # 開始日（例: "7月1日", "8月15日"）
+        end: "7月31日"        # 終了日（例: "7月31日", "9月30日"）
+        status: "completed"   # ステータス: completed(完了), pending(予定), milestone(マイルストーン)
+      - name: "基本設計"
+        start: "7月15日"
+        end: "8月31日"
+        status: "pending"
+      - name: "詳細設計"
+        start: "8月15日"
+        end: "9月15日"
+        status: "pending"
+  - category: "開発・実装"
+    items:
+      - name: "フロントエンド開発"
+        start: "8月1日"
+        end: "10月15日"
+        status: "pending"
+      - name: "バックエンド開発"
+        start: "8月1日"
+        end: "10月15日"
+        status: "pending"
+      - name: "API統合"
+        start: "9月1日"
+        end: "10月31日"
+        status: "pending"
+  - category: "テスト・検証"
+    items:
+      - name: "単体テスト"
+        start: "9月1日"
+        end: "10月15日"
+        status: "pending"
+      - name: "結合テスト"
+        start: "10月1日"
+        end: "10月31日"
+        status: "pending"
+      - name: "リリース準備"
+        start: "10月15日"
+        end: "10月31日"
+        status: "milestone"
