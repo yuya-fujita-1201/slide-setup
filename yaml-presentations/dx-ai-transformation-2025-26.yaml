@@ -3,6 +3,7 @@
 
 title: "2025‑26 DX & AI トランスフォーメーション全体マップ"
 description: "Accenture Japan が主導する「DX × GenAI」改革を 3 階層（戦略・施策・基盤）で俯瞰し、ロードマップと KPI を多角的に可視化する"
+layout: "4x3"  # 4列3段レイアウト
 
 cards:
   - title: "🌟 ゴール"

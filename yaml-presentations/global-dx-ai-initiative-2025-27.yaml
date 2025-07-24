@@ -1,0 +1,69 @@
+title: "2025‑27年度 グローバル DX & Generative AI イニシアチブ"
+description: "2025‑27年度の「グローバル DX & Generative AI」イニシアチブを 1 枚に集約。レイアウトは カード 12 枚（4 列 × 3 段）で全体像を可視化"
+type: "content"
+
+layout: "4x3"
+cards:
+  - title: "🎯 ビジョン"
+    items:
+      - "*AI for Everyone* の実現"
+      - "全従業員の 50 % が AI ツールを日常利用"
+      - "ESG スコア 20 % 向上"
+  - title: "📊 KPI サマリ"
+    items:
+      - "ROI 3.8×（2027 見込み）"
+      - "MTTR 48h → 4h"
+      - "CSAT +22 pt"
+  - title: "💰 投資ロードマップ"
+    items:
+      - "2025: ¥12 B → 2026: ¥16 B → 2027: ¥18 B"
+      - "60 % は AI Platform 開発に充当"
+  - title: "⚖️ ガバナンス & リスク"
+    items:
+      - "ISO/IEC 42001 取得計画"
+      - "AI 倫理委員会（四半期レビュー）"
+      - "RAG 出力品質 ≧ 0.9"
+  - title: "🏢 組織体制"
+    items:
+      - "AI CoE 120 名／グローバル支所 3 拠点"
+      - "2‑tier Expert Network"
+  - title: "🧑‍🎓 人材育成"
+    items:
+      - "GenAI Bootcamp 700 名"
+      - "LLM 評価ハッカソン"
+      - "\"AI メンター\" 制度"
+  - title: "🤝 パートナーシップ"
+    items:
+      - "Anthropic Alliance"
+      - "Google Cloud Premier"
+      - "NVIDIA DGX Ready"
+  - title: "🛠️ 技術基盤"
+    items:
+      - "Claude 4 Sonnet, GPT‑4o"
+      - "Vector Store: PGVector"
+      - "Serverless + Event‑Driven"
+  - title: "🔄 MLOps / DevOps"
+    items:
+      - "Vertex AI Pipeline"
+      - "GitHub Actions ＋ ArgoCD"
+      - "Blue‑Green & Canary 10 %"
+  - title: "🔒 セキュリティ"
+    items:
+      - "IAM SSO & MFA"
+      - "Prompt Injection Guard"
+      - "Audit Log 365 d 保存"
+  - title: "🗄️ データ戦略"
+    items:
+      - "全社 Data Lake 統合"
+      - "ガバナンスカタログ 100 %"
+      - "リアルタイム同期 5 分以内"
+  - title: "🚀 拡張計画"
+    items:
+      - "マルチモーダル対応"
+      - "自社 LLM 蒸留"
+      - "外部 SaaS OEM 提供"
+
+notes:
+  - "進捗率が 50 % 未満かつリスク「高」は Exec Review 対象"
+  - "カードは 4 列 × 3 段のレイアウトで配置"
+  - "各カードは薄紫背景（#F3F1FF, 透過 5%）で統一"
