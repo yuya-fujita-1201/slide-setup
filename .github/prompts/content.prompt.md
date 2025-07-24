@@ -1,5 +1,7 @@
 !include ../copilot-instructions.md
 
+# ⚠️ CRITICAL: Always create YAML files in yaml-presentations/ directory ONLY
+
 # Content Slide Generator
 
 ## Purpose
@@ -55,14 +57,35 @@ items:
 3. Populate content with provided data
 4. Add consistent styling and branding
 
-## File Output Instructions
+## 🚨 MANDATORY FILE PLACEMENT RULES 🚨
+
+### Step 1: YAML File Creation
+1. **ALWAYS** create YAML files in `yaml-presentations/` directory
+2. **NEVER** create `examples/` or `configs/` directories
+3. **Example path**: `yaml-presentations/ai-strategy-2025.yaml`
+
+### Step 2: HTML Generation
 When generating content slides:
 1. **Create organized folder structure**: `slides/content/YYYYMMDD_HHMM/`
 2. **Use timestamp format**: YYYYMMDD_HHMM (e.g., 20250723_1430)
 3. **Save as index.html**: Main slide file should always be named `index.html`
 4. **Include complete HTML**: Self-contained file with embedded CSS and all required elements
 
-**Example Output Path:**
+**Example Workflow:**
+```bash
+# 1. Create YAML file
+# Create: yaml-presentations/ai-strategy-2025.yaml
+
+# 2. Build TypeScript
+npm run build
+
+# 3. Generate slide (EXACT COMMAND)
+npm run generate -- --type content --config yaml-presentations/ai-strategy-2025.yaml
+
+# Output: slides/content/YYYYMMDD_HHMM/index.html
 ```
-slides/content/20250723_1430/index.html
-```
+
+### ❌ COMMON MISTAKES TO AVOID:
+- `node cli/generate-slide.ts` ❌ (Cannot run TypeScript directly)
+- `npm run generate -- generate --type` ❌ (Double "generate")
+- Backslashes `\` in paths ❌ (Use forward slashes `/`)

@@ -1,21 +1,45 @@
-# Accenture Slide Template - Copilot Instructions
+# ⚠️ MANDATORY COPILOT INSTRUCTIONS - READ FIRST ⚠️
 
-## ⚠️ CRITICAL: File Protection Rules
+## 🚨 CRITICAL FILE PLACEMENT RULES - NO EXCEPTIONS 🚨
 
-### DO NOT MODIFY THESE DIRECTORIES:
-- `samples/` - Contains reference slide examples for users
-- `yaml-templates/` - Contains documented template files
-- `templates/` - Contains Handlebars template files
+### ❌ NEVER CREATE THESE DIRECTORIES:
+- `examples/` - DEPRECATED, DO NOT USE
+- `configs/` - DEPRECATED, DO NOT USE
+- Any new directories for YAML files
 
-### ALWAYS CREATE NEW FILES IN:
-- `configs/` - Place all new YAML configuration files here
-- `slides/` - Generated HTML output (auto-created by CLI)
+### ✅ ALWAYS CREATE NEW YAML FILES IN:
+- **`yaml-presentations/`** - THE ONLY LOCATION FOR NEW SLIDE YAML FILES
+- Path example: `yaml-presentations/your-slide-name.yaml`
 
-### Workflow for New Slides:
-1. Copy template from `yaml-templates/` to `configs/`
-2. Customize the copied file with user content
-3. Generate slide using CLI with configs/ path
-4. NEVER modify original templates or samples
+### 📋 MANDATORY WORKFLOW:
+1. **STOP** - Check if `yaml-presentations/` directory exists
+2. **COPY** template from `yaml-templates/` to `yaml-presentations/`
+3. **EDIT** the copied file with user content  
+4. **BUILD** - Run `npm run build` to compile TypeScript
+5. **GENERATE** - Use exact command: `npm run generate -- --type [TYPE] --config yaml-presentations/[FILE].yaml`
+6. **NEVER** create `examples/` or any other directories
+
+### 🚨 EXACT CLI COMMANDS TO USE:
+```bash
+# 1. Always build first
+npm run build
+
+# 2. Generate slide (use exact syntax)
+npm run generate -- --type content --config yaml-presentations/your-file.yaml
+npm run generate -- --type timeline --config yaml-presentations/your-file.yaml
+npm run generate -- --type comparison --config yaml-presentations/your-file.yaml
+```
+
+### ❌ WRONG COMMANDS (DO NOT USE):
+- `node cli/generate-slide.ts` (TypeScript files cannot be run directly)
+- `node ./cli/generate-slide.ts` (Same issue)
+- `npm run generate -- generate --type` (Double "generate" is wrong)
+- Windows backslashes in paths (use forward slashes)
+
+### 🚫 PROTECTED DIRECTORIES (DO NOT MODIFY):
+- `samples/` - Reference slide examples
+- `yaml-templates/` - Template files with documentation
+- `templates/` - Handlebars template files
 
 ## Design Standards (DO NOT CHANGE)
 

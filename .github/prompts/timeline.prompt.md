@@ -1,5 +1,7 @@
 !include ../copilot-instructions.md
 
+# ⚠️ CRITICAL: Always create YAML files in yaml-presentations/ directory ONLY
+
 # Timeline / Roadmap Slide Generator
 
 ## Purpose
@@ -87,14 +89,35 @@ tasks:
 **Output:** 
 Dynamic HTML slide with 16-week grid, month headers, and calculated task positions.
 
-## File Output Instructions
+## 🚨 MANDATORY FILE PLACEMENT RULES 🚨
+
+### Step 1: YAML File Creation
+1. **ALWAYS** create YAML files in `yaml-presentations/` directory
+2. **NEVER** create `examples/` or `configs/` directories
+3. **Example path**: `yaml-presentations/project-roadmap.yaml`
+
+### Step 2: HTML Generation
 When generating timeline slides:
 1. **Create organized folder structure**: `slides/timeline/YYYYMMDD_HHMM/`
 2. **Use timestamp format**: YYYYMMDD_HHMM (e.g., 20250723_1430)
 3. **Save as index.html**: Main slide file should always be named `index.html`
 4. **Include complete HTML**: Self-contained file with embedded CSS and all required elements
 
-**Example Output Path:**
+**Example Workflow:**
+```bash
+# 1. Create YAML file
+# Create: yaml-presentations/project-roadmap.yaml
+
+# 2. Build TypeScript
+npm run build
+
+# 3. Generate slide (EXACT COMMAND)
+npm run generate -- --type timeline --config yaml-presentations/project-roadmap.yaml
+
+# Output: slides/timeline/YYYYMMDD_HHMM/index.html
 ```
-slides/timeline/20250723_1430/index.html
-```
+
+### ❌ COMMON MISTAKES TO AVOID:
+- `node cli/generate-slide.ts` ❌ (Cannot run TypeScript directly)
+- `npm run generate -- generate --type` ❌ (Double "generate")
+- Backslashes `\` in paths ❌ (Use forward slashes `/`)

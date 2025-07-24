@@ -2,7 +2,7 @@
 # 比較表スライド用のYAMLテンプレート
 # 
 # このテンプレートをコピーして、プロジェクトの実際の情報に置き換えてください
-# CLI実行例: npm run generate -- --type comparison --config configs/your-comparison.yaml
+# CLI実行例: npm run generate -- --type comparison --config yaml-presentations/your-comparison.yaml
 
 title: "システム改善効果比較"  # スライドのタイトル
 description: "新旧システムの性能とコスト比較分析"  # スライドの説明文

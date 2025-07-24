@@ -2,7 +2,7 @@
 # タイムライン/ロードマップスライド用のYAMLテンプレート
 # 
 # このテンプレートをコピーして、プロジェクトの実際の情報に置き換えてください
-# CLI実行例: npm run generate -- --type timeline --config configs/your-timeline.yaml
+# CLI実行例: npm run generate -- --type timeline --config yaml-presentations/your-timeline.yaml
 
 title: "新システム開発ロードマップ"  # スライドのタイトル
 description: "7月から10月までの開発スケジュールと主要マイルストーン"  # スライドの説明文

@@ -1,0 +1,67 @@
+# 2025-26 DX & AI トランスフォーメーション全体マップ
+# Accenture Japan DX × GenAI 改革スライド
+
+title: "2025‑26 DX & AI トランスフォーメーション全体マップ"
+description: "Accenture Japan が主導する「DX × GenAI」改革を 3 階層（戦略・施策・基盤）で俯瞰し、ロードマップと KPI を多角的に可視化する"
+
+cards:
+  - title: "🌟 ゴール"
+    items:
+      - "2026 年度までに主要業務 40 % を AI 自動化"
+      - "売上総利益 +12 %"
+      - "CSAT 95 pt 以上"
+  - title: "🧭 戦略 1｜データ統合"
+    items:
+      - "全社データレイク統合 (Δ コスト –25 %)"
+      - "ガバナンスポリシー刷新"
+      - "リアルタイム同期 5 分以内"
+  - title: "🧭 戦略 2｜生成 AI"
+    items:
+      - "マルチ LLM オーケストレーション"
+      - "社内 RAG 基盤 v2"
+      - "LLM 評価指標を統一"
+  - title: "🧭 戦略 3｜オペレーション変革"
+    items:
+      - "AI ITSM チャットボット"
+      - "自動コードレビュー 80 %"
+      - "NoOps & Auto‑Healing"
+  - title: "🛠️ テクノロジー基盤"
+    items:
+      - "**クラウド:** AWS / Azure Hybrid"
+      - "**DB:** BigQuery, Snowflake"
+      - "**Vector:** PGVector + Qdrant"
+  - title: "🧩 API エコシステム"
+    items:
+      - "GraphQL ゲートウェイ"
+      - "OpenAPI v3 バージョニング"
+      - "3rd‑party Marketplace 120+"
+  - title: "🤝 パートナーシップ"
+    items:
+      - "Anthropic Strategic Alliance"
+      - "NVIDIA Inception Elite"
+      - "日本 IBM 共創ラボ"
+  - title: "🧑‍🎓 人材育成"
+    items:
+      - "GenAI Bootcamp 200 名"
+      - "DX プロ認定制度"
+      - "エキスパートコミュニティ発足"
+  - title: "💰 投資計画"
+    items:
+      - "2025: ¥15 B"
+      - "2026: ¥18 B"
+      - "ROI 見込み 3.2×"
+  - title: "📊 KPI モニタリング"
+    items:
+      - "MTTR: 48h → 4h"
+      - "デリバリ速度 +35 %"
+      - "リリース失敗率 –60 %"
+  - title: "🚀 スケールロードマップ"
+    items:
+      - "Q1: PoC 10 件"
+      - "Q2: 全社 PoC 30%"
+      - "Q3: 本番 60% / 海外展開"
+  - title: "⚖️ リスク＆コンプライアンス"
+    items:
+      - "AI 倫理委員会設置"
+      - "セキュリティ ISO/IEC 42001 取得計画"
+      - "ガバナンス KPI 100 %"

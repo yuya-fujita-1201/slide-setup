@@ -1,35 +1,35 @@
-# Accenture Slide Generator
+# Accenture スライドジェネレーター
 
-Dynamic HTML slide generator with Accenture branding and responsive timeline calculations.
+アクセンチュアブランディングとレスポンシブタイムライン計算機能を備えた動的HTMLスライドジェネレーター
 
-## Features
+## 機能
 
-- **Dynamic Period Calculation**: Automatically calculates timeline grids based on month ranges
-- **Consistent Branding**: Accenture purple gradient, typography, and layout standards
-- **Multiple Slide Types**: Timeline/roadmap, content cards, and comparison slides
-- **Print-Ready**: Optimized for PDF generation with proper page sizing (1600×900px)
-- **CLI Interface**: Easy command-line slide generation from YAML configs
+- **動的期間計算**: 月範囲に基づいてタイムライングリッドを自動計算
+- **一貫したブランディング**: アクセンチュア紫グラデーション、タイポグラフィ、レイアウト基準
+- **複数のスライドタイプ**: タイムライン/ロードマップ、コンテンツカード、比較スライド
+- **印刷対応**: 適切なページサイズ（1600×900px）でPDF生成に最適化
+- **CLIインターフェース**: YAML設定からの簡単なコマンドラインスライド生成
 
-## Quick Start
+## クイックスタート
 
 ```bash
-# Install dependencies
+# 依存関係をインストール
 npm install
 
-# Build TypeScript
+# TypeScriptをビルド
 npm run build
 
-# Generate a timeline slide
-npm run generate -- --type timeline --config configs/timeline.yaml
+# タイムラインスライドを生成
+npm run generate -- --type timeline --config yaml-presentations/timeline.yaml
 
-# List available slide types
+# 利用可能なスライドタイプを一覧表示
 npm run generate -- list-types
 ```
 
-## Slide Types
+## スライドタイプ
 
-### Timeline/Roadmap
-Perfect for project schedules, implementation plans, and milestone tracking.
+### タイムライン/ロードマップ
+プロジェクトスケジュール、実装計画、マイルストーン追跡に最適。
 
 ```yaml
 title: "プロジェクトロードマップ"
@@ -46,8 +46,8 @@ tasks:
         status: "completed"
 ```
 
-### Content Cards
-General information slides with flexible card layouts.
+### コンテンツカード
+柔軟なカードレイアウトを持つ一般情報スライド。
 
 ```yaml
 title: "システムの主な機能"
@@ -59,109 +59,133 @@ cards:
       - "バックアップ機能"
 ```
 
-## GitHub Copilot Integration
+## GitHub Copilot 連携
 
-This repository includes Copilot instructions for AI-assisted slide generation:
+このリポジトリには、AI支援スライド生成のためのCopilot指示が含まれています：
 
-1. **Chat with Copilot**: Ask for slide creation using natural language
-2. **YAML Configuration**: Always create YAML files in the `/configs` directory
-3. **Automatic Generation**: Copilot applies consistent Accenture branding and calculates dynamic layouts
+1. **Copilotとのチャット**: 自然言語でスライド作成を依頼
+2. **YAML設定**: 常に `/yaml-presentations` ディレクトリにYAMLファイルを作成
+3. **自動生成**: Copilotが一貫したアクセンチュアブランディングを適用し、動的レイアウトを計算
 
-### Example Copilot Usage
+### Copilot使用例
 
 ```
 @copilot /timeline 7月から10月までの新システム開発ロードマップを作成してください
 ```
 
-**Important**: When creating new YAML configuration files, always place them in the `/configs` directory to maintain project organization.
+**重要**: 新しいYAML設定ファイルを作成する際は、プロジェクト構成を維持するため、必ず `/yaml-presentations` ディレクトリに配置してください。
 
-## ⚠️ File Protection Notice
+## 🚨 重要：ファイル配置ルール 🚨
 
-**DO NOT modify these directories:**
-- `samples/` - Reference slides for users to understand output format
-- `yaml-templates/` - Template files with documentation comments
-- `templates/` - Core Handlebars templates for slide generation
+### ❌ 絶対に作成してはいけないディレクトリ:
+- `examples/` - 廃止済み、使用禁止
+- `configs/` - 廃止済み、使用禁止
 
-**Always create new files in:** `configs/` directory only.
+### ✅ 新しいYAMLファイルの作成場所:
+- **`yaml-presentations/`** - スライドYAMLファイルの唯一の配置場所
 
-## Getting Started
+### 🚫 変更禁止ディレクトリ:
+- `samples/` - ユーザーが出力形式を理解するための参考スライド
+- `yaml-templates/` - ドキュメント付きコメントを含むテンプレートファイル
+- `templates/` - スライド生成用のコアHandlebarsテンプレート
 
-### 1. View Sample Slides
-Check the `samples/` directory to see what each slide type looks like:
-- `timeline-sample.html` - Timeline/roadmap slide example
-- `content-sample.html` - Content cards slide example  
-- `comparison-sample.html` - Comparison table slide example
+## はじめ方
 
-### 2. Copy YAML Templates
-Use the templates in `yaml-templates/` as starting points:
-- `timeline-template.yaml` - Timeline slide configuration template
-- `content-template.yaml` - Content slide configuration template
-- `comparison-template.yaml` - Comparison slide configuration template
+### 1. サンプルスライドを確認
+`samples/` ディレクトリで各スライドタイプの外観を確認：
+- `timeline-sample.html` - タイムライン/ロードマップスライドの例
+- `content-sample.html` - コンテンツカードスライドの例  
+- `comparison-sample.html` - 比較表スライドの例
 
-### 3. Create Your Slides
-1. Copy a template from `yaml-templates/` to `configs/`
-2. Customize the YAML with your content
-3. Generate: `npm run generate -- --type [timeline|content|comparison] --config configs/your-file.yaml`
+### 2. YAMLテンプレートをコピー
+`yaml-templates/` のテンプレートを開始点として使用：
+- `timeline-template.yaml` - タイムラインスライド設定テンプレート
+- `content-template.yaml` - コンテンツスライド設定テンプレート
+- `comparison-template.yaml` - 比較スライド設定テンプレート
 
-## Project Structure
+### 3. スライドを作成
+1. `yaml-templates/` から `yaml-presentations/` にテンプレートをコピー
+2. YAMLを自分のコンテンツでカスタマイズ
+3. ビルド: `npm run build`
+4. 生成: `npm run generate -- --type [timeline|content|comparison] --config yaml-presentations/your-file.yaml`
+
+### 📋 正しいコマンド例
+```bash
+# 1. TypeScriptをビルド
+npm run build
+
+# 2. スライド生成（正確な構文）
+npm run generate -- --type content --config yaml-presentations/my-slide.yaml
+npm run generate -- --type timeline --config yaml-presentations/my-timeline.yaml
+npm run generate -- --type comparison --config yaml-presentations/my-comparison.yaml
+```
+
+### ❌ よくある間違い
+- `node cli/generate-slide.ts` ❌ (TypeScriptファイルは直接実行不可)
+- `npm run generate -- generate --type` ❌ ("generate"が重複)
+- バックスラッシュ `\` ❌ (スラッシュ `/` を使用)
+
+## プロジェクト構造
 
 ```
-├── samples/                        # Generated sample slides for reference
-│   ├── timeline-sample.html       # Timeline slide example
-│   ├── content-sample.html        # Content slide example
-│   └── comparison-sample.html     # Comparison slide example
-├── yaml-templates/                 # YAML templates with documentation
-│   ├── timeline-template.yaml     # Timeline configuration template
-│   ├── content-template.yaml      # Content configuration template
-│   └── comparison-template.yaml   # Comparison configuration template
-├── configs/                        # YAML configuration files (place all new configs here)
-│   ├── timeline.yaml              # Timeline slide example
-│   ├── content.yaml               # Content slide example
-│   └── comparison.yaml            # Comparison slide example
-├── templates/
+├── cli/                            # スライド生成用CLIスクリプト
+│   └── generate-slide.ts          # TypeScript CLIツール
+├── yaml-presentations/             # YAMLスライドデータ（新しいスライドをここに作成）
+├── docs/                           # プロジェクト文書
+│   └── PROJECT_PROMPT_v4.md       # プロジェクト仕様書
+├── samples/                        # 参考用生成済みサンプルスライド
+│   ├── comparison-sample.html     # 比較スライドの例
+│   ├── content-sample.html        # コンテンツスライドの例
+│   └── timeline-sample.html       # タイムラインスライドの例
+├── templates/                      # Handlebarsテンプレートファイル
 │   ├── partials/
-│   │   ├── header.hbs             # Common header with title/accent bar
-│   │   └── footer.hbs             # Common footer with chevron/copyright
-│   ├── timeline.hbs               # Timeline slide template
-│   └── content.hbs                # Content slide template
-├── cli/
-│   └── generate-slide.ts          # CLI script for slide generation
-└── slides/                        # Generated output (gitignored)
+│   │   ├── footer.hbs             # シェブロン/コピーライトを含む共通フッター
+│   │   └── header.hbs             # タイトル/アクセントバーを含む共通ヘッダー
+│   ├── comparison.hbs             # 比較スライドテンプレート
+│   ├── content.hbs                # コンテンツスライドテンプレート
+│   └── timeline.hbs               # タイムラインスライドテンプレート
+├── yaml-templates/                 # ドキュメント付きYAMLテンプレート
+│   ├── comparison-template.yaml   # 比較設定テンプレート
+│   ├── content-template.yaml      # コンテンツ設定テンプレート
+│   └── timeline-template.yaml     # タイムライン設定テンプレート
+├── package.json                   # Node.js依存関係とスクリプト
+├── tsconfig.json                  # TypeScript設定
+└── slides/                        # 生成された出力（gitignore対象）
 ```
 
-## Development
+## 開発
 
 ```bash
-# Install dependencies
+# 依存関係をインストール
 npm install
 
-# Development mode (watch for changes)
+# 開発モード（変更を監視）
 npm run dev
 
-# Lint and format
+# リントとフォーマット
 npm run lint
 npm run format
 
-# Clean generated files
+# 生成されたファイルをクリーンアップ
 npm run clean
 ```
 
-## Design Standards
+## デザイン基準
 
-All slides follow Accenture design guidelines:
-- **Page Size**: 1600×900px
-- **Typography**: Meiryo UI font family
-- **Colors**: Purple gradient (#a855f7 → #8b5cf6 → #7c3aed)
-- **Branding**: Chevron ">" symbol and consistent copyright
+全てのスライドはアクセンチュアデザインガイドラインに従います：
+- **ページサイズ**: 1600×900px
+- **タイポグラフィ**: Meiryo UIフォントファミリー
+- **カラー**: 紫グラデーション（#a855f7 → #8b5cf6 → #7c3aed）
+- **ブランディング**: シェブロン「>」シンボルと一貫したコピーライト
 
-## Timeline Features
+## タイムライン機能
 
-- **Flexible Periods**: 2-12 months supported with automatic week calculation
-- **Dynamic Grids**: CSS Grid adjusts to period length (weeks × 4 per month)
-- **Today Marker**: Red line showing current date position
-- **Task Overlaps**: Multi-tier positioning for overlapping tasks
-- **Status Colors**: Completed (gray), Pending (purple), Milestone (orange)
+- **柔軟な期間**: 2-12ヶ月をサポート、自動週計算
+- **動的グリッド**: CSS Gridが期間の長さに応じて調整（週 × 月当たり4週）
+- **今日マーカー**: 現在の日付位置を示す赤いライン
+- **タスクオーバーラップ**: オーバーラップするタスクのマルチティア配置
+- **ステータスカラー**: 完了（グレー）、予定（パープル）、マイルストーン（オレンジ）
 
-## License
+## ライセンス
 
 MIT License - Copyright © 2025 Accenture

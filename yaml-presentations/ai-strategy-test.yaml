@@ -1,0 +1,52 @@
+title: "2025年度 AI 戦略プログラム全体像"
+description: "Accenture Japan の AI 推進ロードマップを「ビジョン ➜ 戦略 ➜ 実装 ➜ 効果測定」の 4 レイヤーで整理し、各要素を詳細に可視化する"
+cards:
+  - title: "🎯 ビジョン"
+    items:
+      - "*ヒト×AI* 協働で 30% 自動化を実現"
+      - "業務品質を 1.5 倍に向上"
+      - "内製 AI モデル比率 70% 以上"
+  - title: "🛣️ 戦略"
+    items:
+      - "RAG 基盤の横串化"
+      - "AI CoE 組織設立 (50 名)"
+      - "標準 PoC フレーム 3 種"
+  - title: "🔧 実装プラットフォーム"
+    items:
+      - "**LLM**: Claude 4 Sonnet, GPT‑4o"
+      - "**MLOps**: Vertex AI, Azure ML"
+      - "**DevOps**: GitHub Actions, Copilot"
+  - title: "🏗️ 実装プロジェクト"
+    items:
+      - "フロント: Next.js + LangChain"
+      - "バック: RAG (Elasticsearch + Vector DB)"
+      - "セキュリティ: IAM 統合 & DLP"
+  - title: "📈 効果測定 KPI"
+    items:
+      - "MTTR: 48h → 6h"
+      - "NPS: +18pt"
+      - "運用工数: –42%"
+  - title: "🚀 スケール計画"
+    items:
+      - "2025Q3: 全社展開 5 部門"
+      - "2025Q4: 海外拠点へロールアウト"
+      - "2026Q1: 外部 SaaS 提供開始"
+table:
+  title: "主要 RAG ソリューション機能比較"
+  headers: 
+    - "項目"
+    - "自社 RAG"
+    - "Azure AI Search"
+    - "Vertex AI RAG"
+    - "LangChain Hub"
+  rows:
+    - ["コスト (月あたり)", "$3K", "$5K", "$4.5K", "$2K"]
+    - ["スケーラビリティ", "★★★★☆", "★★★☆☆", "★★★★★", "★★★☆☆"]
+    - ["コネクタ数", "18", "12", "15", "100+ (コミュニティ)"]
+    - ["レスポンス中央値", "650 ms", "780 ms", "540 ms", "920 ms"]
+    - ["日本語最適化", "◎", "◯", "◎", "△"]
+    - ["導入期間", "4 週", "6 週", "5 週", "2 週"]
+notes:
+  - "**コスト** は 100K トークン / 日換算。為替レート ¥155/USD で試算"
+  - "日本語最適化は BERT 評価で 0.85 以上を ◎ と定義"
+  - "スケールは 99 パーセンタイル同時接続 1k セッション基準"

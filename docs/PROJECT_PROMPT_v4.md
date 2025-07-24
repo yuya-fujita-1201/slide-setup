@@ -8,7 +8,7 @@ The scaffold includes:
 - **GitHub Copilot Integration**: Custom instructions and reusable prompts for AI-assisted slide generation
 - **Dynamic Timeline Engine**: Automatic period calculation and grid generation for roadmap slides
 - **Template System**: Handlebars-based templates with consistent Accenture branding
-- **CLI Tool**: Command-line interface for batch slide generation from YAML configs
+- **CLI Tool**: Command-line interface for batch slide generation from YAML slide data
 
 ## Key Features
 
@@ -48,7 +48,7 @@ Generated slides are:
 
 2. **Generate Slide**:
    ```bash
-   npm run generate -- --type timeline --config configs/timeline.yaml
+   npm run generate -- --type timeline --config yaml-presentations/timeline.yaml
    ```
 
 3. **Use with Copilot**:
@@ -74,6 +74,6 @@ This scaffold provides a complete foundation for professional slide generation w
 - `templates/` - Core Handlebars templates
 
 **Working Directory:**
-- `configs/` - Create all new YAML files here only
+- `yaml-presentations/` - Create all new YAML files here only
 
-When assisting users, always copy from templates to configs/ and customize there.
+When assisting users, always copy from templates to yaml-presentations/ and customize there.
